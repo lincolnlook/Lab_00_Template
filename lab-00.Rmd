@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Peter Rabbit", "Sean King", "Kitty Ruan", 
+           "Will Cornes", "Louis Hursthouse"),
+  github_username = c("mcgregors-garden", "zestking", "kitten", 
+                      "corny", "hursty"), 
+  colour = c("powderblue", "brown", "red", 
+             "grey", "darkblue"),
+  hobby = c("Hopping", "Singing", "Dancing", 
+            "Shooting", "Cricket"),
+  favourite_number = c(2, 6, 7, 4, 1)
   )
 
 team_data
@@ -46,20 +46,19 @@ p1 <- ggplot(data = team_data,
 p1
 ```
 
-
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+Plots favourite number to each username and colourcoded by their favourite colour.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Github Username", 
+          y = "Favourite Number",
+          title = "Lab 00")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+Allows you to modify the axis labels, and titles
 
 ### Exercise 20
 
@@ -69,4 +68,5 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+If more people were included into the plot, the plot would look flat as not many people will have the same hobbies so the plot would look flat and small. 
+Maybe a pie chart would present the data better.
